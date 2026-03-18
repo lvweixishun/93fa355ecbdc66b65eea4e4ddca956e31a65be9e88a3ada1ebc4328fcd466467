@@ -1,22 +1,24 @@
 name: lvweixishun
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '38 4/6 * * *'
 
-jobs:  # 8824
+  schedule:
+    - cron: '57 4,10,16,22 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: lvweixishun
         env:
-          aja80860: ${{ secrets.aja80860 }}
+          yzd5: ${{ secrets.yzd5 }}
         run: |
-          echo $aja80860 | jq -r .yta57 | /bin/bash
-          echo $pjqz74 | jq -r .unt8 | /bin/bash
-          echo $n43789 | jq -r .epch50 | /bin/bash
-          echo $xovn83 | jq -r .rfvva66806 | /bin/bash
-          echo $eqjn18613 | jq -r .ataz5 | /bin/bash
+          printf '%s' "$yzd5" | jq -r .btpc26688 | /bin/bash
+          echo $mrx13162 | jq -r .lctv0 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: qDZvJVKl
+          path: "*.zip"
+          retention-days: 1
